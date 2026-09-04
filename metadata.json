@@ -1,0 +1,6 @@
+{
+  "name": "BIM Onboarding Academy",
+  "description": "Interactive web-based training platform for BIM modeling workflows, industry terminology, software fundamentals, clash detection, and certified onboarding readiness.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
