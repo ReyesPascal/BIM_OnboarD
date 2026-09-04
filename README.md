@@ -12,29 +12,26 @@ Includes:
 
 ---
 
-## 🚀 Quickstart Guide for Ubuntu Linux (Intel ThinkPad)
+## 🚀 One-Command Install & Run (Ubuntu Linux / Intel ThinkPad)
 
-This guide walks you through uploading the app to GitHub, installing Docker on your Ubuntu ThinkPad, and running the Web GUI locally on `http://localhost:3000`.
+Run this **single command** in your Ubuntu terminal (`Ctrl + Alt + T`). It will clone your repository, auto-install Docker (if missing), build the container, and launch the Web GUI on port **1339**:
+
+```bash
+git clone https://github.com/ReyesPascal/BIM_OnboarD.git && cd BIM_OnboarD && ./install.sh
+```
+
+Once finished, open your browser to:
+👉 **[http://localhost:1339](http://localhost:1339)**
 
 ---
 
-### Step 1: Upload / Export the Project to GitHub
+### Step 1: Upload / Push Current Code to GitHub
 
-You can publish this project to GitHub using either of these two methods:
+If you haven't pushed this code to your repository yet, push it using your terminal or personal access token:
 
-#### Method A: Direct Export from Google AI Studio (Easiest)
-1. In the Google AI Studio interface, click the **Settings / More Options** menu (top right or project menu).
-2. Select **Export to GitHub** (or **Download as ZIP**).
-3. Connect your GitHub account and choose or create a new repository name (e.g. `bim-onboarding-academy`).
-4. If you chose ZIP download: extract the ZIP into a folder on your ThinkPad, open a terminal in that folder, and push using:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit of BIM Onboarding Academy"
-   git branch -M main
-   git remote add origin https://github.com/<YOUR_GITHUB_USERNAME>/bim-onboarding-academy.git
-   git push -u origin main
-   ```
+```bash
+git push -u origin main
+```
 
 #### Method B: Push directly from your terminal
 ```bash
@@ -96,7 +93,7 @@ cp .env.example .env
 # If you have a Gemini API key for live AI mentor responses, you can add it to .env:
 # nano .env
 
-# 4. Build and start the container in the background
+# 4. Build and start the container in the background (or run ./install.sh)
 docker compose up --build -d
 ```
 
@@ -106,9 +103,9 @@ docker compose up --build -d
 
 Once the container starts, open your web browser (Chrome, Firefox, Edge) on your Ubuntu ThinkPad and navigate to:
 
-👉 **[http://localhost:3000](http://localhost:3000)**
+👉 **[http://localhost:1339](http://localhost:1339)**
 
-You will see the full BIM Onboarding Academy platform running locally.
+You will see the full BIM Onboarding Academy platform running locally on port **1339**.
 
 ---
 
